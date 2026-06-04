@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/blood_donor_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: Surya@217
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 8080
+
+jwt:
+  secret: aVeryLongSecretKeyForJwtAuthenticationInBloodDonorManagementSystemWhichShouldBeAtLeast256BitsLong
+  expiration: 86400000 # 24 hours
+
+cors:
+  allowed-origins: http://localhost:5173 # Vite default port
