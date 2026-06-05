@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql:
+    url: jdbc:mysql:jdbc:mysql://localhost:3306/blood_donor_db
     username: root
     password: Surya@217
     driver-class-name: com.mysql.cj.jdbc.Driver
